@@ -1,28 +1,31 @@
 class Solution1 {
-    fun romanToInt(s: String): Int {
-        val map = mapOf(
-            'I' to 1,
-            'V' to 5,
-            'X' to 10,
-            'L' to 50,
-            'C' to 100,
-            'D' to 500,
-            'M' to 1000
-        )
-        var answear = map[s[s.lastIndex]]!!
-        for (i in s.lastIndex - 1 downTo 0) {
-            if (map[s[i + 1]]!! > map[s[i]]!!) {
-                answear -= map[s[i]]!!
-            }else {
-                answear += map[s[i]]!!
+    fun threeSumClosest(nums: IntArray, target: Int): Int {
+        var min = Int.MAX_VALUE
+        var result = 0
+        nums.sort()
+        for (i in 0 until nums.lastIndex) {
+            var l = i + 1
+            var r = nums.lastIndex
+            while (l < r) {
+                val sum = nums[i] + nums[l] + nums[r]
+                val distance = Math.abs(sum - target)
+                if (min > distance) {
+                    min = distance
+                    result = sum
+                }
+                when {
+                    min == 0 -> return sum
+                    sum > target -> r--
+                    else -> l++
+                }
             }
         }
-        return answear
+        return result
     }
 }
 
 fun main(args: Array<String>) {
     val solution = Solution1()
-    println(solution.romanToInt("MCMXCIV"))
+    println(solution.threeSumClosest(intArrayOf(1,1,1,0),-100))
 
 }
