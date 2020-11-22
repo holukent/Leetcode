@@ -1,3 +1,5 @@
+package leetcode
+
 fun gameOfLife(board: Array<IntArray>): Unit {
     val result: Array<IntArray> = Array(board.size){ IntArray(board[0].size) }
     for (i in board.indices) {

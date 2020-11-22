@@ -1,4 +1,6 @@
-fun longestPalindrome(s: String): Int {
+package leetcode
+
+fun longestPalindrome1(s: String): Int {
     var count = 0
     for (i in '\u0041'..'\u005A') {
         val n = s.count { it == i }
