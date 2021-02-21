@@ -1,3 +1,5 @@
+package leetcode
+
 fun merge1(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
     val list1 = nums1.toList().subList(0, m)
     val list2 = nums2.toList().subList(0, n)

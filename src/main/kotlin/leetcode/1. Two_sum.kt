@@ -1,3 +1,5 @@
+package leetcode
+
 fun twoSum(nums: IntArray, target: Int): IntArray {
     var array: IntArray = IntArray(2)
     loop@for (i in 0 until nums.lastIndex) {

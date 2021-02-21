@@ -19,8 +19,3 @@ fun letterCombinations(digits: String): List<String> {
 fun backtracking(list: MutableList<String>, str: String,) {
 
 }
-fun main() {
-    val ans = Solution1()
-
-
-}

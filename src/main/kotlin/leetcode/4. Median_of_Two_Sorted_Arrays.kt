@@ -1,4 +1,4 @@
-
+package leetcode
 fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
     var ans = 0.0
     val nums = (nums1 + nums2).sorted()

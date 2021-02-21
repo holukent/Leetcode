@@ -1,3 +1,5 @@
+package leetcode
+
 fun isPalindrome(s: String): Boolean {
     val result = s.toLowerCase()
     var start = 0

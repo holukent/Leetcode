@@ -1,3 +1,5 @@
+package leetcode
+
 fun validPalindrome(s: String): Boolean {
     fun validPalindrome1(s: String): Boolean {
         println(s)
@@ -21,8 +23,5 @@ fun validPalindrome(s: String): Boolean {
         last--
     }
     return true
-}
-fun main() {
-    validPalindrome("abc").run { println(this) }
 }
 

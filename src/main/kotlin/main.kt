@@ -1,29 +1,23 @@
-class Solution1 {
-    fun subsets(nums: IntArray): List<List<Int>> {
-        val list = mutableListOf<List<Int>>()
-        list.add(listOf())
-        backtracking(nums, list)
-        return list
-    }
+import leetcode.*
+import java.util.*
 
-    fun backtracking(nums: IntArray, list: MutableList<List<Int>>,) {
-        for (i in nums.indices) {
-            list.add(listOf(nums[i]))
-            backtracking(nums.)
-        }
-    }
+fun main() {
 
-    fun sumOddLengthSubarrays(arr: IntArray): Int {
-
-    }
-
-}
+    val list1 = ListNode(3)
+    list1.next = ListNode(2)
+    list1.next!!.next = ListNode(0)
+    list1.next!!.next!!.next = ListNode(-4)
+    list1.next!!.next!!.next!!.next = list1.next!!
+    list1.next = ListNode(1)
 
 
-fun main(args: Array<String>) {
-    val solution = Solution1()
+    val list2 = ListNode(1)
+    list2.next = ListNode(0)
+    list2.next!!.next = ListNode(0)
 
-    println(solution.subsets(intArrayOf(1,2,3)))
+    val list3 = ListNode(1)
 
+    println(getDecimalValue(list2))
 
 }
+
