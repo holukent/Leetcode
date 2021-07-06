@@ -1,3 +1,5 @@
+package leetcode
+
 fun findJudge(N: Int, trust: Array<IntArray>): Int {
     val array0 = IntArray(trust.size)
     trust.forEachIndexed { index, ints ->
